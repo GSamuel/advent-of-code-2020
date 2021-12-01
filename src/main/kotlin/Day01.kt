@@ -2,7 +2,7 @@ fun main() {
     ProblemDay01().solve()
 }
 
-class ProblemDay01:Problem("Day01") {
+class ProblemDay01:Problem<Int>("Day01") {
     override fun validatePart1TestInput(result: Int) {
         check(result == 514579)
     }

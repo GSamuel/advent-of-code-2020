@@ -1,8 +1,8 @@
-abstract class Problem(private val fileName:String) {
-    abstract fun validatePart1TestInput(result:Int)
-    abstract fun validatePart2TestInput(result:Int)
-    abstract fun part1(input:List<String>):Int
-    abstract fun part2(input:List<String>):Int
+abstract class Problem<T>(private val fileName:String) {
+    abstract fun validatePart1TestInput(result:T)
+    abstract fun validatePart2TestInput(result:T)
+    abstract fun part1(input:List<String>):T
+    abstract fun part2(input:List<String>):T
 
     fun solve() {
         validatePart1TestInput(part1(readTestInput()))
